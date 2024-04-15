@@ -3,19 +3,9 @@ tasks:
       ./scripts/terraform-deploy.sh 
       ./scripts/ecr-push.sh 
       ./scripts/kubernetes-deploy.sh
-  - command: docker-compose up
 
 vscode:
   extensions:
     - "HashiCorp.terraform"
     - "ms-azuretools.vscode-docker"
     - "p1c2u.docker-compose"
-
-ports:
-  - port: 3000
-    name: "Microservice A"
-    visibility: private
-
-  - port: 3001
-    name: "Microservice B"
-    visibility: private
