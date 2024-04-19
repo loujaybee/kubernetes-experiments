@@ -1,5 +1,8 @@
 #/bin/bash
 
+## Install Linux utilities (e.g. envsubst)
+brew install gettext
+
 # Install Terraform
 TF_VERSION=$(curl -sL https://releases.hashicorp.com/terraform/index.json | jq -r '.versions[].builds[].version' | egrep -v 'rc|beta|alpha' | tail -1)
 
