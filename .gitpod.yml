@@ -1,7 +1,8 @@
 tasks:
   - command: |
-      ./scripts/terraform-deploy.sh 
-      ./scripts/ecr-push.sh 
+      ./scripts/install-tools.sh 
+      ./scripts/run-terraform.sh
+      ./scripts/ecr-push.sh
       ./scripts/kubernetes-deploy.sh
 
 vscode:

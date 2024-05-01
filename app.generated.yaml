@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: microservicea
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: microservice-a
@@ -13,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: 467900200181.dkr.ecr.us-east-1.amazonaws.com/microservice-a
+          image: 795024836336.dkr.ecr.us-east-1.amazonaws.com/microservice-a
           resources:
             limits:
               memory: "128Mi"
@@ -50,7 +51,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: 467900200181.dkr.ecr.us-east-1.amazonaws.com/microservice-b
+          image: 795024836336.dkr.ecr.us-east-1.amazonaws.com/microservice-b
           resources:
             limits:
               memory: "128Mi"

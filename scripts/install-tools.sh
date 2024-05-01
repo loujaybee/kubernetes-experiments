@@ -10,6 +10,7 @@ curl -LO "https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_
 unzip terraform_${TF_VERSION}_linux_amd64.zip
 sudo mv -f terraform /usr/local/bin/
 rm terraform_${TF_VERSION}_linux_amd64.zip
+rm -rf LICENSE.txt
 
 terraform init
 
@@ -24,11 +25,3 @@ unzip awscliv2.zip
 sudo ./aws/install
 rm -rf awscliv2.zip
 rm -rf aws
-
-## Install Tilt
-gem uninstall tilt
-curl -fsSL https://raw.githubusercontent.com/tilt-dev/tilt/master/scripts/install.sh | bash
-
-aws configure
-
-terraform apply
